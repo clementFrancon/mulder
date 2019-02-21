@@ -61,3 +61,5 @@ lint: vendor | $(PKGS) $(GOLINT) # ❷
 	done ; exit $$ret
 test-unit:
 	$(GO) test -v .
+test-integration:
+	$(GO) test -v ./tests -addr ${MULDER_ADDR}
